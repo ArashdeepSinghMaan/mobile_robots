@@ -38,9 +38,126 @@
 
  <main class="content-wrapper">
     <div class="main-content">
-      <h2>Pointers</h2>
-      <p>This section explains core concepts like pointers in Nav2 and how they relate to simulation plugins.</p>
+      <h2>Nav2</h2>
+       <p>
+      Nav2 is the modern, flexible, and production-grade navigation stack built to support the next generation of autonomous robots.
+    </p>
+       <section>
+    <h3>✅ When to Use Nav2</h3>
+    <p>If you're working with any of the following, Nav2 is the right choice:</p>
+    <ul>
+      <li>ROS 2-based robotic platforms</li>
+      <li>Warehouse/mobile robots and AMRs</li>
+      <li>Custom navigation workflows (e.g., elevators, docking, charging)</li>
+      <li>Need for behavior trees and complex task control</li>
+      <li>Use of multiple sensors or planners</li>
+    </ul>
+       </section>
+        <h2>🧭 Difference Between Nav (ROS 1 move_base) and Nav2 (ROS 2 Navigation)</h2>
 
+  <section>
+    <h3>🚀 What is Nav2?</h3>
+    <p>
+      <strong>Nav2 (Navigation 2)</strong> is the official navigation stack for <strong>ROS 2</strong>, designed to replace the ROS 1 <code>move_base</code>. It provides tools and libraries that enable robots to move autonomously in an environment. Nav2 is modular, scalable, and extensible, supporting modern navigation concepts like <strong>behavior trees</strong>, <strong>lifecycle management</strong>, and <strong>multi-sensor integration</strong>.
+    </p>
+    <p>
+      It’s ideal for mobile robots, autonomous warehouses, delivery robots, and advanced AMRs that require production-ready performance.
+    </p>
+  </section>
+
+  <section>
+    <h3>🔍 Feature Comparison Table</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Aspect</th>
+          <th>Nav (move_base - ROS 1)</th>
+          <th>Nav2 (ROS 2 Navigation Stack)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Framework</td>
+          <td>Built for ROS 1</td>
+          <td>Built for ROS 2</td>
+        </tr>
+        <tr>
+          <td>Main Node</td>
+          <td>move_base (monolithic)</td>
+          <td>Modular architecture (separate nodes for planner, controller, etc.)</td>
+        </tr>
+        <tr>
+          <td>Communication</td>
+          <td>ROS 1 Pub/Sub & Service</td>
+          <td>ROS 2 Pub/Sub, Services, Actions, and Lifecycles</td>
+        </tr>
+        <tr>
+          <td>Lifecycle Management</td>
+          <td>Not supported</td>
+          <td>Fully integrated via <code>ManagedLifecycleNode</code></td>
+        </tr>
+        <tr>
+          <td>Behavior Trees</td>
+          <td>Not supported (basic goal send)</td>
+          <td>Supported via Behavior Tree Navigator</td>
+        </tr>
+        <tr>
+          <td>Planning Plugins</td>
+          <td>Navfn, DWA, TEB</td>
+          <td>NavFn, SmacPlanner, Theta*, DWB, RPP, custom plugins</td>
+        </tr>
+        <tr>
+          <td>Configuration</td>
+          <td>Single YAML file (<code>move_base.yaml</code>)</td>
+          <td>Multiple YAMLs per node (planner, controller, recovery, etc.)</td>
+        </tr>
+        <tr>
+          <td>Costmap Architecture</td>
+          <td>Single plugin-based costmap_2d</td>
+          <td>Separate global and local costmaps, improved plugin system</td>
+        </tr>
+        <tr>
+          <td>Recovery Behaviors</td>
+          <td>Predefined (rotate, clear, backup)</td>
+          <td>BT-based, customizable and extensible</td>
+        </tr>
+        <tr>
+          <td>Sensor Integration</td>
+          <td>Primarily 2D (LaserScan)</td>
+          <td>Supports 3D via Voxel Layer, PointCloud, Depth Cameras</td>
+        </tr>
+        <tr>
+          <td>Extensibility</td>
+          <td>Limited pluginlib-style</td>
+          <td>Highly extensible via plugin + modular node architecture</td>
+        </tr>
+        <tr>
+          <td>Active Maintenance</td>
+          <td>Deprecated for ROS 1</td>
+          <td>Actively developed and maintained</td>
+        </tr>
+        <tr>
+          <td>SLAM/Localization</td>
+          <td>AMCL, GMapping, Cartographer</td>
+          <td>Same tools, integrated with ROS 2 lifecycles and launch system</td>
+        </tr>
+        <tr>
+          <td>Simulation Support</td>
+          <td>Works with Gazebo (ROS 1)</td>
+          <td>Works with Gazebo, Ignition, RViz2, and full ROS 2 simulation</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h3>🧠 Summary</h3>
+    <div class="highlight">
+      <strong>move_base (ROS 1)</strong>: Monolithic design with limited flexibility.<br>
+      <strong>Nav2 (ROS 2)</strong>: Modular, extensible, behavior-tree-based, and ready for production-level robotic applications.
+    </div>
+  </section>
+     <!--
       <h3>📷 Add an Image</h3>
       <img src="images/your-image.jpg" alt="A related image about pointers or simulation">
 
@@ -50,7 +167,7 @@
 
       <h3>📑 Additional Section</h3>
       <p>Learn how pointers are used in plugin development, managing memory in ROS2 nodes, and other relevant applications.</p>
-
+-->
       <div class="tutorial-section">
         <h2>🧑‍💻 Nav2 / Simulation Tutorials</h2>
         <ul class="tutorial-links">
